@@ -145,29 +145,7 @@ json{
   "framework": "Hugging Face Transformers",
   "deployment": "AWS + Docker MLOps Pipeline"
 }
-🎓 Training Your Own Model
-Dataset Preparation
-Organize your dataset in the following structure:
-dataset/
-├── train/
-│   ├── Normal/
-│   │   ├── image001.png
-│   │   └── ...
-│   ├── Pneumonia/
-│   │   ├── image001.png
-│   │   └── ...
-│   └── ...
-├── val/
-│   ├── Normal/
-│   ├── Pneumonia/
-│   └── ...
-└── test/
-    ├── Normal/
-    ├── Pneumonia/
-    └── ...
-Train the Model
-bash# Training
-python train_model.py --data_dir ./dataset --mode train
+
 
 # Testing
 python train_model.py --data_dir ./dataset --mode test --model_path ./models/lungscan-vit
@@ -261,10 +239,8 @@ for i in range(10):
 print(f'Average inference time: {sum(times)/len(times):.2f}s')
 print(f'Min: {min(times):.2f}s, Max: {max(times):.2f}s')
 "
-📊 Model Performance
-MetricScoreOverall Accuracy87%Precision85%Recall86%F1-Score85.5%Inference Time<3sAUC-ROC0.92
-Per-Class Performance
-ConditionAccuracyPrecisionRecallNormal92%90%93%Pneumonia88%86%89%COVID-1985%83%87%Tuberculosis84%82%85%Lung Cancer86%84%87%............
+
+
 🔧 Configuration
 Environment Variables
 Create a .env file:
